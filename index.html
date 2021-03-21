@@ -10,6 +10,29 @@
         <meta name="author" content="Samedov Aleksandr">
         <title>Runderground</title>
         <link href="style.css" rel="stylesheet">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+        function AjaxFormRequest(result_id,formMain,url) {
+                jQuery.ajax({
+                    url:     url,
+                    type:     "POST",
+                    dataType: "html",
+                    data: jQuery("#"+formMain).serialize(), 
+                    success: function(response) {
+                    document.getElementById(result_id).innerHTML = response;
+                },
+                error: function(response) {
+                document.getElementById(result_id).innerHTML = "<p>Возникла ошибка при отправке формы. Попробуйте еще раз</p>";
+                }
+             });
+
+             $(':input','#formMain')
+ 				.not(':button, :submit, :reset, :hidden')
+ 				.val('')
+ 				.removeAttr('checked')
+ 				.removeAttr('selected');
+    }
+</script>
     </head>
 <body>
   <!-- Header -->
@@ -377,15 +400,38 @@
     <div class="section__header">
       <h2 class="section__title">Спортивные сборы</h2>
       <div>
-        <p class="section__text">Приглашаем на наши топовые спортивные сборы! Регистрация <a href="https://forms.gle/ja6FszYGA4EHkeib8" target="blank">по ссылке</a></p>
-        <form action="send.php" method="POST">
-          <input type="text" name="name" placeholder="Ваше имя">
-          <input type="text" name="phone" placeholder="Ваш телефон">
-          <input type="submit" class="btn" >
-      </form>
+        <p class="section__text">Приглашаем на наши топовые спортивные сборы!</p>
+          <div class="form">
+           <div id="messegeResult">
+               <p>Заполни данные ниже чтобы принять участие</p>
+           </div>
+              
+           <form method="post" action="" id="formMain" name="formMain">
+             <div class="form-item">
+              ФИО <input id="name" type="text" name="name" placeholder="Введите ФИО полностью" maxlength="30" autocomplete="off" required/>
+             </div>
+             <div class="form-item">
+              Дата рождения <input id="birthday" type="date" name="birthday" placeholder="Введите дату рождения" autocomplete="off" required/>
+             </div>
+             <div class="form-item">
+              Телефон <input id="telephone" type="Tel" name="telephone" placeholder="Введите ваш телефон" maxlength="30" autocomplete="off" required/>
+             </div>  
+             <div class="form-item">
+              Электронная почта <input id="email" type="email" name="email" placeholder="Введите email" autocomplete="off" required/>
+             </div>  
+             <div class="form-item">
+              VK <input id="vk" type="text" name="vk" placeholder="Ссылка на страницу ВК" autocomplete="off" required/> 
+             </div>  
+             <div class="form-item">
+              <input id="button" type="button" value="Отправить заявку" onclick="AjaxFormRequest('messegeResult', 'formMain', 'send.php')"/>
+             </div>  
+           </form>
+          </div>
+       </div>
       </div>
     </div>
 
+    <!--
     <div class="about">
 
       <div class="about__item">
@@ -411,7 +457,8 @@
 
     </div>
 
-  </div>
+    </div>
+    
 </section>
 
 

@@ -179,10 +179,6 @@ footer {
     margin-bottom: 40px;
 }
 
-.section__text {
-    font-size: 15px;
-}
-
 /* About */
 
 .about {
@@ -637,6 +633,21 @@ footer {
     height: auto;
     max-width: 100%;
 }
+
+/* Form */
+
+.form {
+    border-radius: 20px;
+    background: gainsboro;
+    margin-bottom: 30px;
+}
+
+.form-item {
+    padding:12px;
+    position:relative;
+    display: grid;
+}
+
 @media (max-width: 1230px) {
 
     /* Intro */

@@ -64,9 +64,48 @@
   <div class="container">
 
     <div class="section__header">
+      <h2 class="section__title">Спортивный выезд 16-18 апреля</h2>
+      <div>
+        <p class="section__text"></p>
+          <div class="form">
+           <div id="messegeResult">
+              <p>Приглашаем на наши топовые спортивные сборы!</p>
+               <p>Заполни данные ниже чтобы принять участие.</p>
+           </div>
+              
+           <form method="post" action="" id="formMain" name="formMain">
+             <div class="form-item">
+              ФИО <input id="name" type="text" name="name" placeholder="Введите ФИО полностью" maxlength="30" autocomplete="off" required/>
+             </div>
+             <div class="form-item">
+              Дата рождения <input id="birthday" type="date" name="birthday" placeholder="Введите дату рождения" autocomplete="off" required/>
+             </div>
+             <div class="form-item">
+              Телефон <input id="telephone" type="Tel" name="telephone" placeholder="Введите ваш телефон" maxlength="30" autocomplete="off" required/>
+             </div>  
+             <div class="form-item">
+              Электронная почта <input id="email" type="email" name="email" placeholder="Введите email" autocomplete="off" required/>
+             </div>  
+             <div class="form-item">
+              VK <input id="vk" type="text" name="vk" placeholder="Ссылка на страницу ВК" autocomplete="off" required/> 
+             </div>  
+             <div class="form-item">
+              <input id="button" type="button" value="Отправить заявку" onclick="AjaxFormRequest('messegeResult', 'formMain', 'send.php')"/>
+             </div>  
+           </form>
+          </div>
+       </div>
+      </div>
+    </div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section__header">
       <h2 class="section__title">Кто мы такие и что мы делаем</h2>
       <div>
-        <p class="section__text">Мы - амбициозные спортсмены, которые готовятся стать первыми везде.</p>
+        <p class="section__text">Runderground - это Московское беговое сообщество. Наша цель - быть всегда быстрее #ForeverFaster</p>
+        <p class="section__text">Каждый из нас живет собственной жизнью, следует своим правилам и бегает по-своему, но от этого наша команда становится только сильнее.</p>
       </div>
     </div>
     
@@ -76,7 +115,7 @@
         <div class="about__image">
           <img src="int1.jpg" >
         </div>
-      <div class="about__text">Тренировки</div>
+      <div class="about__text"><a href="#statistics">Тренировки</a></div>
       </div>
       
       <div class="about__item">
@@ -97,38 +136,27 @@
   </div>
 </section>
 
-<!--
-<div class="statistics">
+<div class="statistics"><a name="statistics"></a>
   <div class="container">
     <div class="stat">
       <div class="stat__item">
-        <div class="stat__value">42</div>
-        <div class="stat__text">Забега финишировано</div>
+        <div class="stat__value">29.03</div>
+        <div class="stat__text">Беговая тренировка</div>
+        <div><a href="https://vk.com/rrunderground?w=wall-86253717_2965">Записаться</a></div>
       </div>
       <div class="stat__item">
-        <div class="stat__value">43</div>
-        <div class="stat__text">Забега финишировано</div>
+        <div class="stat__value">30.03</div>
+        <div class="stat__text">Длительная пробежка</div>
+        <div><a href="https://vk.com/rrunderground?w=wall-86253717_2965">Записаться</a></div>
       </div>
       <div class="stat__item">
-        <div class="stat__value">44</div>
-        <div class="stat__text">Забега финишировано</div>
-      </div>
-      <div class="stat__item">
-        <div class="stat__value">45</div>
-        <div class="stat__text">Забега финишировано</div>
-      </div>
-      <div class="stat__item">
-        <div class="stat__value">46</div>
-        <div class="stat__text">Забега финишировано</div>
-      </div>
-      <div class="stat__item">
-        <div class="stat__value">47</div>
-        <div class="stat__text">Забега финишировано</div>
+        <div class="stat__value">31.03</div>
+        <div class="stat__text">Функциональная тренировка</div>
+        <div><a href="https://vk.com/rrunderground?w=wall-86253717_2965">Записаться</a></div>
       </div>
     </div>
   </div>
 </div>
--->
 
 <section class="section">
   <div class="container">
@@ -154,7 +182,7 @@
         <a href="https://www.instagram.com/_ivan_nikolayevich_/?igshid=mzg4lto3kfpa" target="blank"><img class="coaches__photo" src="van.jpg" alt=""></a>
         <div class="coaches__content">
           <div class="coaches__name">Алексеев Иван</div>
-          <div class="coaches__prof">OCR тренер</div>
+          <div class="coaches__prof">Тренер по Функциональным тренировкам</div>
         </div>
       </div>
       
@@ -162,7 +190,7 @@
         <a href="https://www.instagram.com/antondotsenko/?igshid=i5o1nibn4nzg" target="blank"><img class="coaches__photo" src="ant.jpg" alt=""></a>
         <div class="coaches__content">
           <div class="coaches__name">Доценко Антон</div>
-          <div class="coaches__prof">Тренер по бегу</div>
+          <div class="coaches__prof">Тренер по беговым тренировкам</div>
         </div>
       </div>
       
@@ -183,7 +211,7 @@
       </div>
 
       <div class="coaches__item">
-        <a href="https://www.instagram.com/samedov_aleksandr/" target="blank"><img class="coaches__photo" src="header-logo.jpg" alt=""></a>
+        <a href="https://www.instagram.com/samedov_aleksandr/" target="blank"><img class="coaches__photo" src="samedov.jpg" alt=""></a>
         <div class="coaches__content">
           <div class="coaches__name">Самедов Александр</div>
           <div class="coaches__prof">Пейсер</div>
@@ -393,43 +421,6 @@
 
   </div>
 </section>
-
-<section class="section">
-  <div class="container">
-
-    <div class="section__header">
-      <h2 class="section__title">Спортивные сборы</h2>
-      <div>
-        <p class="section__text">Приглашаем на наши топовые спортивные сборы!</p>
-          <div class="form">
-           <div id="messegeResult">
-               <p>Заполни данные ниже чтобы принять участие</p>
-           </div>
-              
-           <form method="post" action="" id="formMain" name="formMain">
-             <div class="form-item">
-              ФИО <input id="name" type="text" name="name" placeholder="Введите ФИО полностью" maxlength="30" autocomplete="off" required/>
-             </div>
-             <div class="form-item">
-              Дата рождения <input id="birthday" type="date" name="birthday" placeholder="Введите дату рождения" autocomplete="off" required/>
-             </div>
-             <div class="form-item">
-              Телефон <input id="telephone" type="Tel" name="telephone" placeholder="Введите ваш телефон" maxlength="30" autocomplete="off" required/>
-             </div>  
-             <div class="form-item">
-              Электронная почта <input id="email" type="email" name="email" placeholder="Введите email" autocomplete="off" required/>
-             </div>  
-             <div class="form-item">
-              VK <input id="vk" type="text" name="vk" placeholder="Ссылка на страницу ВК" autocomplete="off" required/> 
-             </div>  
-             <div class="form-item">
-              <input id="button" type="button" value="Отправить заявку" onclick="AjaxFormRequest('messegeResult', 'formMain', 'send.php')"/>
-             </div>  
-           </form>
-          </div>
-       </div>
-      </div>
-    </div>
 
     <!--
     <div class="about">

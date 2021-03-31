@@ -42,6 +42,7 @@ hr {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
+    background: radial-gradient(black, transparent)
 }
 
 .intro__title {
